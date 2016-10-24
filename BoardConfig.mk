@@ -29,9 +29,9 @@ TARGET_NO_BOOTLOADER := true
 # Audio
 BOARD_HAVE_LOW_LATENCY_AUDIO := true
 BOARD_USES_ALSA_AUDIO:= true
-BOARD_USES_LEGACY_ALSA_AUDIO:= false
 BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
+USE_CUSTOM_AUDIO_POLICY := true
 
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
@@ -54,7 +54,6 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Display
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_C2D_COMPOSITION := false
 TARGET_USES_ION := true
@@ -106,10 +105,6 @@ RECOVERY_FSTAB_VERSION = 2
 TARGET_RECOVERY_FSTAB = device/lge/vk810/rootdir/etc/fstab.altev
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/lge/vk810/sepolicy
 
 # Time Services
 BOARD_USES_QC_TIME_SERVICES := true
