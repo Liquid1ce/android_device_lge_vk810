@@ -7,8 +7,7 @@ created localmanifest.xml in local_manifests
 cd .repo/local_manifests
 vim localmanifest.xml
 
-<?xml version="1.0" encoding="UTF-8"?>
-
+#<?xml version="1.0" encoding="UTF-8"?>
 #<manifest>
 #<remote name="vk810" fetch="https://github.com/Liquid1ce" />
 #<project path="device/lge/vk810" name="android_device_lge_vk810" remote="vk810" revision="omni_twrp_mm"/>
