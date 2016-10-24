@@ -1,22 +1,22 @@
-Copyright 2015 - The CyanogenMod Project
+# android_device_lge_vk810 Coming soon
 
-Device configuration for LGE G Pad 8.3 (Verizon)
-================================================
+Follow instructions here
+https://github.com/lj50036/platform_manifest_twrp_cm
 
-Basic   | Spec Sheet
--------:|:-------------------------
-CPU     | Quad-core 1.5 GHz Krait 300
-CHIPSET | Qualcomm APQ8064 Pro Snapdragon 600
-GPU     | Adreno 320
-Memory  | 2 GB RAM
-Shipped Android Version | 4.2.2
-Storage | 16GB
-MicroSD | Up to 64GB
-Battery | 4600 mAh
-Dimensions | 216.9mm x 126.5mm x 8.9mm
-Display | 1200 x 1920 pixels IPS LCD
-Camera  | 5 MP
-Release Date | March 2014
+created localmanifest.xml in local_manifests
+cd .repo/local_manifests
+vim localmanifest.xml
+
+#<?xml version="1.0" encoding="UTF-8"?>
+#<manifest>
+#<remote name="vk810" fetch="https://github.com/Liquid1ce" />
+#<project path="device/lge/vk810" name="android_device_lge_vk810" remote="vk810" revision="omni_twrp_mm"/>
+#</manifest>
 
 
-![LG G Pad 8.3 VZW](http://i.imgur.com/VXDKWyB.jpg "LG G Pad 8.3 VZW")
+repo sync
+
+source build/envsetup.sh
+lunch omni_vk810-eng
+make clean && make -j5 recoveryimage
+
